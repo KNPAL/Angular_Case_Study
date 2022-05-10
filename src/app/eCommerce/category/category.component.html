@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row my-2">
+    <div class="filter ">
+      <label class="switch mx-2">
+        <input (click)="onViewChange()" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      <select id="drpFilter" (change)="onDropdownSelect($event)">
+        <option disabled value="Select Price">Select Price</option>
+        <option *ngFor="let price of PriceFilterList" [value]="price">{{price}}</option>
+      </select>     
+      <label class="mx-2" (click)="Reset()">Reset</label>
+    </div>
+  </div>
+  <div class="row m-0">
+    <app-list-view [ProductArray]="productList" *ngIf="!isGridView"></app-list-view>
+    <app-grid-view [ProductArray]="productList" *ngIf="isGridView"></app-grid-view>
+  </div>
+
+</div>

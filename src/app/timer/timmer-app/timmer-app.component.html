@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <app-input-timer-data (started)="updateStartCounter($event)" (paused)="updatePausedCounter($event)"></app-input-timer-data>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <app-logs [startLog]="slog" [pauseLog]="plog"></app-logs>
+        </div>
+        <div class="col-md-6">
+            <app-counterlog [startCounter]="sCount" [pauseCounter]="pCount"></app-counterlog>
+        </div>
+    </div>
+</div>

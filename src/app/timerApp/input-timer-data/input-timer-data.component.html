@@ -1,0 +1,16 @@
+<div class="container border">
+    <div class="row">
+        <div class="col-md-12 my-1">
+            Enter Timer Limit <input name="timer" [(ngModel)]="timmerCount" (keydown)="onClick($event)" />
+        </div>
+        <div class="col-md-12 my-1">
+            <button class="btn btn-outline-secondary mx-1" (click)="onStart()">Start</button>
+            <button class="btn btn-outline-secondary mx-1" (click)="onPause()">Pause</button>
+            <button class="btn btn-outline-secondary mx-1" (click)="onReset()">Reset</button>
+        </div>
+    </div>
+    <div class="row">
+        <div #logPanel>
+        </div>
+    </div>
+</div>
