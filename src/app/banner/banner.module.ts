@@ -5,14 +5,13 @@ import { AnimatedBannerComponent } from './animated-banner/animated-banner.compo
 
 @NgModule({
     declarations: [
-    AnimatedBannerComponent],
+        AnimatedBannerComponent],
     imports: [
         CommonModule,
         RouterModule.forChild([
             { path: '', component: AnimatedBannerComponent }
         ])
-    ],
-    bootstrap: [AnimatedBannerComponent]
+    ]
 })
 
 export class BannerModule { }
