@@ -1,9 +1,10 @@
 <div class="container border">
     <div class="row">
-        <div class="col-md-12 my-1">
-            Enter Timer Limit <input name="timer" [(ngModel)]="timmerCount" (keydown)="onClick($event)" />
+        <div class="col-md-12 pt-2 my-1 align-center">
+            <label class="px-2 ">Enter Timer Limit</label>
+            <input name="timer" type="number" min="0" [(ngModel)]="timmerCount" (keydown)="onClick($event)" />
         </div>
-        <div class="col-md-12 my-1">
+        <div class="col-md-12 my-1 align-center">
             <button class="btn btn-outline-secondary mx-1" (click)="onStart()">Start</button>
             <button class="btn btn-outline-secondary mx-1" (click)="onPause()">Pause</button>
             <button class="btn btn-outline-secondary mx-1" (click)="onReset()">Reset</button>

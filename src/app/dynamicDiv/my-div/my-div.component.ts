@@ -46,7 +46,7 @@ export class MyDivComponent implements OnInit, AfterViewInit {
     this.renderer.setAttribute(btn, 'id', '' + elementId);
     this.renderer.appendChild(btn, this.renderer.createText('click'));
     this.renderer.listen(btn, 'click', event => {
-      this.onDivClick(event.path[0].id);
+      this.onDivClick(event.target.id);
     });
     this.renderer.appendChild(div, btn);
     this.renderer.appendChild(this.parentDiv.nativeElement, div);

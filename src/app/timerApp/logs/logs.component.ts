@@ -13,11 +13,11 @@ export class LogsComponent implements OnInit {
 
   ngOnInit() {
     this.timerService.startClickCountEmitter.subscribe(() => {
-      this.addPauseLog( 'Started at' + new Date());
+      this.addPauseLog( 'Started at ' + new Date());
     });
 
     this.timerService.pauseClickCountEmitter.subscribe(() => {
-      this.addPauseLog('Pased at' + new Date());
+      this.addPauseLog('Pased at ' + new Date());
     });
   }
 

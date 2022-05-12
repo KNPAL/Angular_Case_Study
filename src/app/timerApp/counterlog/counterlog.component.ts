@@ -10,7 +10,10 @@ export class CounterlogComponent implements OnInit {
 
   startCounter: number;
   pauseCounter: number;
-  constructor(private timerService: TimerService) { }
+  constructor(private timerService: TimerService) {
+    this.startCounter = 0;
+    this.pauseCounter = 0;
+   }
 
   ngOnInit() {
     this.timerService.startClickCountEmitter.subscribe((data) => {

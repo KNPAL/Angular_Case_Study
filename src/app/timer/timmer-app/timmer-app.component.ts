@@ -20,11 +20,11 @@ export class TimmerAppComponent implements OnInit {
   }
 
   updateStartCounter($event) {
-    this.slog = 'Started at' + new Date();
+    this.slog = 'Started at ' + new Date();
     this.sCount = $event;
   }
   updatePausedCounter($event) {
-    this.plog = 'Pased at' + new Date();
+    this.plog = 'Pased at ' + new Date();
     this.pCount = $event;
   }
 
